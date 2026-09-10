@@ -1,0 +1,11 @@
+{
+  "name": "Battery Charge Limit",
+  "author": "Community",
+  "flags": ["_root"],
+  "api_version": 2,
+  "publish": {
+    "tags": ["hardware", "battery", "charging"],
+    "description": "Set and persist a battery charge limit from Decky Loader.",
+    "image": ""
+  }
+}
