@@ -4,12 +4,34 @@ A Decky Loader plugin and systemd service for controlling the battery charge lim
 
 It may also work on other handhelds that use the same Linux `capacity` and `charge_behaviour` interfaces.
 
+## Installation
+
+Run:
+
+    curl -fsSL https://raw.githubusercontent.com/kro44a-cmd/Ayaneo-Air-Pro-battery-charge-limit-decky-plugin-for-CachyOS-SteamOS/main/install.sh | sudo bash
+
+The installer builds and installs the Decky plugin, creates the configuration file, and installs and enables the battery-limit service.
+
+## Uninstall
+
+You can uninstall directly from GitHub without cloning the repository:
+
+    curl -fsSL https://raw.githubusercontent.com/kro44a-cmd/Ayaneo-Air-Pro-battery-charge-limit-decky-plugin-for-CachyOS-SteamOS/main/uninstall.sh | sudo bash
+
+This removes the Decky plugin, battery-limit service, and battery-limit script.
+
+The configuration file is preserved:
+
+    /etc/battery-limit.conf
+
+To remove it manually:
+
+    sudo rm /etc/battery-limit.conf
+
 ## Features
 
 - Battery charge-limit slider in Decky Loader
-- Adjustable charge limit from 50% to 100%
 - Systemd service runs automatically in the background
-- Checks the battery every 10 seconds
 - Uses the device's built-in `charge_behaviour` control
 
 ## How It Works
@@ -71,14 +93,6 @@ Then enter:
 
 No service restart is required.
 
-## Installation
-
-Run:
-
-    curl -fsSL https://raw.githubusercontent.com/kro44a-cmd/Ayaneo-Air-Pro-battery-charge-limit-decky-plugin-for-CachyOS-SteamOS/main/install.sh | sudo bash
-
-The installer builds and installs the Decky plugin, creates the configuration file, and installs and enables the battery-limit service.
-
 ## Requirements
 
 - AYANEO Air Pro
@@ -88,22 +102,6 @@ The installer builds and installs the Decky plugin, creates the configuration fi
 - `/sys/class/power_supply/BAT0/charge_behaviour`
 
 Other handhelds may work if they use the same battery interfaces and charging logic.
-
-## Uninstall
-
-You can uninstall directly from GitHub without cloning the repository:
-
-    curl -fsSL https://raw.githubusercontent.com/kro44a-cmd/Ayaneo-Air-Pro-battery-charge-limit-decky-plugin-for-CachyOS-SteamOS/main/uninstall.sh | sudo bash
-
-This removes the Decky plugin, battery-limit service, and battery-limit script.
-
-The configuration file is preserved:
-
-    /etc/battery-limit.conf
-
-To remove it manually:
-
-    sudo rm /etc/battery-limit.conf
 
 ## Disclaimer
 
