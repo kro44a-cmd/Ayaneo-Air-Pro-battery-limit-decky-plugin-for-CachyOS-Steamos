@@ -8,7 +8,7 @@ CONFIG_PATH="/etc/battery-limit.conf"
 
 if [ "$EUID" -ne 0 ]; then
     echo "Please run with sudo:"
-    echo "  curl -fsSL https://raw.githubusercontent.com/kro44a-cmd/Ayaneo-Air-Pro-battery-limit-decky-plugin-for-CachyOS-SteamOS/main/uninstall.sh | sudo bash"
+    echo "  curl -fsSL https://raw.githubusercontent.com/kro44a-cmd/Ayaneo-Air-Pro-battery-charge-limit-decky-plugin-for-CachyOS-SteamOS/main/uninstall.sh | sudo bash"
     exit 1
 fi
 
