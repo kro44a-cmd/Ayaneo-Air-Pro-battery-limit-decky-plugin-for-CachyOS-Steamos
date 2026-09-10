@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-REPO="kro44a-cmd/Ayaneo-Air-Pro-battery-limit-decky-plugin-for-CachyOS-SteamOS"
+REPO="kro44a-cmd/Ayaneo-Air-Pro-battery-charge-limit-decky-plugin-for-CachyOS-SteamOS"
 PLUGIN_DIR="/home/deck/homebrew/plugins/battery-charge-limit"
 CONFIG="/etc/battery-limit.conf"
 
