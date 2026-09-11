@@ -76,7 +76,5 @@ echo "Battery limit: $(cat "$CONFIG")%"
 echo
 echo "Steam has been restarted."
 echo
-echo "Future one-liner:"
-echo "curl -fsSL https://raw.githubusercontent.com/$REPO/main/install.sh | sudo bash"
 
 rm -rf "$TMP"
