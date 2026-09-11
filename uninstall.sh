@@ -40,6 +40,14 @@ rm -rf "$PLUGIN_DIR"
 systemctl daemon-reload
 
 echo
+echo "Restarting Steam..."
+
+# Restart Steam as the deck user
+sudo -u deck steam -shutdown 2>/dev/null || true
+sleep 3
+sudo -u deck steam -silent >/dev/null 2>&1 &
+
+echo
 echo "=== Uninstallation complete ==="
 echo
 echo "Removed:"
@@ -51,6 +59,8 @@ echo "Charging behaviour restored to auto if it was inhibited."
 echo
 echo "Configuration preserved:"
 echo "$CONFIG_PATH"
+echo
+echo "Steam has been restarted."
 echo
 echo "To remove the configuration as well:"
 echo "  sudo rm $CONFIG_PATH"
