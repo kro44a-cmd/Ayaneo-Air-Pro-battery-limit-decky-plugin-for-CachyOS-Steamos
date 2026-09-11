@@ -98,5 +98,5 @@ echo "Battery limit: $(cat "$CONFIG")%"
 echo "Decky plugin installed."
 echo "Battery-limit service is running."
 echo
-echo "Future one-liner:"
+echo "ignore the steam error"
 echo "curl -fsSL https://raw.githubusercontent.com/$REPO/main/install.sh | sudo bash"
