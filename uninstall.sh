@@ -37,10 +37,11 @@ rm -f "$SCRIPT_PATH"
 echo "Removing Decky plugin..."
 rm -rf "$PLUGIN_DIR"
 
-systemctl daemon-reload
 
 echo
-echo "Restarting Steam..."
+echo "Restarting Decky Loader..."
+systemctl restart plugin_loader
+systemctl daemon-reload
 
 echo
 echo "=== Uninstallation complete ==="
