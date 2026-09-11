@@ -1,7 +1,7 @@
 {
   "name": "Ayaneo-battery-charge-limit",
   "version": "1.0.0",
-  "description": "Battey charge limit for ayanep air pror",
+  "description": "Battey charge limit for ayanep air pro",
   "type": "module",
   "scripts": {
     "build": "rollup -c",
