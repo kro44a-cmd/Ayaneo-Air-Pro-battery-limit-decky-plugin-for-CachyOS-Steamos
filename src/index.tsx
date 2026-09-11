@@ -19,17 +19,20 @@ function Content() {
   const loadBatteryLimit = async () => {
     try {
       const result = await getBatteryLimit();
+
       if (result >= 50 && result <= 100) {
         setBatteryLimitState(result);
       }
     } catch (e) {
       console.error("Failed to get battery limit:", e);
     }
+
     setLoading(false);
   };
 
   const handleBatteryLimitChange = async (value: number) => {
     setBatteryLimitState(value);
+
     try {
       await setBatteryLimit(value);
     } catch (e) {
@@ -43,21 +46,21 @@ function Content() {
 
   return (
     <PanelSection title="Battery Charge Limit">
-      <PanelSectionRow>
-        {loading ? (
-          <div>Loading...</div>
-        ) : (
-          <SliderField
-            label="Charge Limit"
-            value={batteryLimit}
-            min={50}
-            max={100}
-            step={1}
-            showValue={true}
-            onChange={handleBatteryLimitChange}
-          />
-        )}
-      </PanelSectionRow>
+    <PanelSectionRow>
+    {loading ? (
+      <div>Loading...</div>
+    ) : (
+      <SliderField
+      label="Charge Limit"
+      value={batteryLimit}
+      min={50}
+      max={100}
+      step={1}
+      showValue={true}
+      onChange={handleBatteryLimitChange}
+      />
+    )}
+    </PanelSectionRow>
     </PanelSection>
   );
 }
