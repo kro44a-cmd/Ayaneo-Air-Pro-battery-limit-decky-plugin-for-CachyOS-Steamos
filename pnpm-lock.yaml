@@ -1,0 +1,17 @@
+{
+  "name": "Battery Charge Limit",
+  "author": "Community",
+  "flags": [
+    "_root"
+  ],
+  "api_version": 2,
+  "publish": {
+    "tags": [
+      "hardware",
+      "battery",
+      "charging"
+    ],
+    "description": "Battery charge limit control",
+    "image": ""
+  }
+}
