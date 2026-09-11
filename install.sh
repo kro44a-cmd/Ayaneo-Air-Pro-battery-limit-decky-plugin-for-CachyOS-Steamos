@@ -63,8 +63,20 @@ systemctl daemon-reload
 systemctl enable --now battery-limit.service
 
 echo
+echo "Restarting Steam..."
+
+# Restart Steam as the deck user
+sudo -u deck steam -shutdown 2>/dev/null || true
+sleep 3
+sudo -u deck steam -silent >/dev/null 2>&1 &
+
+echo
 echo "Done."
 echo "Battery limit: $(cat "$CONFIG")%"
 echo
+echo "Steam has been restarted."
+echo
 echo "Future one-liner:"
 echo "curl -fsSL https://raw.githubusercontent.com/$REPO/main/install.sh | sudo bash"
+
+rm -rf "$TMP"
