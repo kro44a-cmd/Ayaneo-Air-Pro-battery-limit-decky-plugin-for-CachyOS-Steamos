@@ -36,7 +36,7 @@ cd "$TMP"
 
 echo "Downloading repository..."
 git clone "https://github.com/$REPO.git"
-cd Ayaneo-Air-Pro-battery-limit-decky-plugin-for-CachyOS-SteamOS
+cd Ayaneo-Air-Pro-battery-charge-limit-decky-plugin-for-CachyOS-SteamOS
 
 echo "Installing JS dependencies..."
 pnpm install
